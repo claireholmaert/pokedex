@@ -14,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <link rel="shortcut icon" href="/svg/pokeball.svg" type="image/x-icon" />
       <body
       >
         {children}

@@ -56,7 +56,7 @@ export default function PokemonList({ pokemons }: { pokemons: any[] }) {
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const itemsPerPage = 10;
+  const itemsPerPage = 8;
   const totalPages = Math.ceil(pokemons.length / itemsPerPage);
 
   // Récupérer tous les types disponibles (sans doublons)
@@ -89,13 +89,16 @@ export default function PokemonList({ pokemons }: { pokemons: any[] }) {
   );
 
   return (
-    <main className="p-4">
+    <main className="min-h-screen py-3 px-4">
+      <div className="flex items-center justify-between">
       <h1 className="text-2xl font-bold mb-4">Liste des Pokémon</h1>
 
-      {/* Nombre total de Pokémon */}
-      <p className="mb-4 text-lg font-medium">
-        Nombre total de Pokémon : {filteredPokemons.length}
-      </p>
+{/* Nombre total de Pokémon */}
+<p className="mb-4 text-lg font-medium">
+  Nombre total de Pokémon : {filteredPokemons.length}
+</p>
+      </div>
+      
 
       {/* Barre de recherche */}
       <Input
